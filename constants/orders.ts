@@ -1,5 +1,9 @@
+import foodpanda from "@/assets/foodpandaLogo.png"
+import daraz from "@/assets/darazlogo.png"
+import amazon from "@/assets/amazonLogo.jpg"
+
 export const sampleOrders = {
-    daraz: [
+    daraz:{logo:daraz, orders: [
       { orderId: 101, customerName: "Alice", amount: "$120", status: "Delivered" },
       { orderId: 102, customerName: "Bob", amount: "$85", status: "Shipped" },
       { orderId: 103, customerName: "Cathy", amount: "$150", status: "Pending" },
@@ -30,8 +34,8 @@ export const sampleOrders = {
       { orderId: 128, customerName: "Ben", amount: "$55", status: "Delivered" },
       { orderId: 129, customerName: "Clara", amount: "$220", status: "Shipped" },
       { orderId: 130, customerName: "David", amount: "$180", status: "In Transit" }
-    ],
-    foodpanda: [
+    ]},
+    foodpanda: {logo:foodpanda, orders:[
       { orderId: 201, customerName: "Charlie", amount: "$50", status: "Delivered" },
       { orderId: 202, customerName: "David", amount: "$25", status: "Preparing" },
       { orderId: 203, customerName: "Irene", amount: "$45", status: "Cancelled" },
@@ -60,8 +64,8 @@ export const sampleOrders = {
       { orderId: 226, customerName: "Fay", amount: "$75", status: "Delivered" },
       { orderId: 227, customerName: "Gil", amount: "$60", status: "In Transit" },
       { orderId: 228, customerName: "Holly", amount: "$90", status: "Pending" }
-    ],
-    amazon: [
+    ]},
+    amazon: {logo:amazon, orders:[
       { orderId: 301, customerName: "Eve", amount: "$200", status: "In Transit" },
       { orderId: 302, customerName: "Frank", amount: "$150", status: "Pending" },
       { orderId: 303, customerName: "Olivia", amount: "$300", status: "Delivered" },
@@ -87,5 +91,5 @@ export const sampleOrders = {
       { orderId: 323, customerName: "Ivy", amount: "$130", status: "Pending" },
       { orderId: 324, customerName: "Jack", amount: "$100", status: "Shipped" },
       { orderId: 325, customerName: "Kim", amount: "$90", status: "Delivered" }
-    ]
+    ]}
   };

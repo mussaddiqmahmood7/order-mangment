@@ -1,8 +1,19 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Order Management
+
+This is a white-label order management platform built with [Next.js](https://nextjs.org). Companies can access their orders by visiting the appropriate subdomain.
+
+## Features
+
+- **Dynamic Subdomains**: Orders and logos are dynamically rendered based on the subdomain.
+- **UI**: A simple and clean design with company logos and order tables.
+- **Sortable Columns**: Orders table supports ascending and descending sorting.
+- **Pagination**: Displays 10 orders per page for better readability.
 
 ## Getting Started
 
-First, run the development server:
+### Local Development Setup
+
+Run the development server:
 
 ```bash
 npm run dev
@@ -12,26 +23,38 @@ yarn dev
 pnpm dev
 # or
 bun dev
+
+```
+For local development, since subdomains may not work, you can test using query parameters:
+
+```
+http://localhost:3000?company=daraz
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This simulates accessing `daraz.ordermade.com` in production.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Adding a New Company
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To add a new company:
+1. Add the company name to `registerCompanies` array in `page.tsx`.
+2. Update the `sampleOrders` object with the company’s logo and order data.
+
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about Next.js, check out these resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js Documentation](https://nextjs.org/docs) - Learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - An interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+I also deploy it to vercel [Deployment Link](https://order-mangment-ten.vercel.app/).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# order-mangment
+## Screenshots
+
+
+![Image Description](assets/localhost.png)
+![Image Description](assets/darazss.png)
+![Image Description](assets/amazonss.png)

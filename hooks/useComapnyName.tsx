@@ -8,12 +8,11 @@ export function CompanyProvider({ children }: { children: ReactNode }) {
 
     useEffect(() => {
         if (typeof window !== "undefined") {
-            const _company = window.location.hostname.split(".")[0];
-            if (company !== _company && _company) {
-                setCompany(_company)
-            }
+            const urlParams = new URLSearchParams(window.location.search);
+            const queryCompany = urlParams.get("company");
+            const subdomainCompany = window.location.hostname.split(".")[0];
+            setCompany(queryCompany || subdomainCompany);
           }
-      
     }, [])
 
     return <CompanyName.Provider value={{ company }}>
